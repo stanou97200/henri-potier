@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+<nav>
+  <a class="m5" routerLink="/home">Home</a> | <a routerLink="/basket">Panier</a>
+  <span [ngPlural]="count">
+    <ng-template ngPluralCase="=0"> (Vide)</ng-template>
+    <ng-template ngPluralCase="=1"> ({{count}} livre)</ng-template>
+    <ng-template ngPluralCase="other"> ({{count}} livres)</ng-template>
+  </span>
+</nav>
+<router-outlet></router-outlet>
